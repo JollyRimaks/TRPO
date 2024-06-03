@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет успеваемости студентов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Учет успеваемости студентов</h1>
+    <div id="input-form">
+        <h2>Добавить студента</h2>
+        <form id="student-form">
+            <label>ФИО: <input type="text" id="name" required></label><br>
+            <label>Год поступления: <input type="number" id="year" required></label><br>
+            <label>Группа: <input type="text" id="group" required></label><br>
+            <label>Предметы и оценки (через запятую): <input type="text" id="subjects" placeholder="Математика:5, Физика:4" required></label><br>
+            <button type="submit">Добавить студента</button>
+        </form>
+    </div>
+    <div id="search-form">
+        <h2>Поиск студента по ФИО</h2>
+        <input type="text" id="search-name" placeholder="Введите ФИО">
+        <button onclick="searchStudent()">Поиск</button>
+    </div>
+    <div id="results">
+        <h2>Результаты поиска</h2>
+        <div id="student-result"></div>
+    </div>
+    <div id="reports">
+        <h2>Список неуспевающих</h2>
+        <button onclick="generateReport()">Сгенерировать отчет</button>
+        <div id="report-result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
